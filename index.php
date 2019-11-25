@@ -5,30 +5,53 @@ session_start();
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+            <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="recursos\css\estilo.css">
         <title>SysControlOfícios</title>
+    
     </head>
     <body>
-        <h1>Cadastrar Ofício</h1>
+         <header class="cabecalho">
+        <h1>Controle de Ofícios</h1>
+        
+        </header>
+        
+        <div class="info"> Preencha e salve as informações corretamente. </div>
+
         <?php
         if(isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
             unset($_SESSION['msg']);
         }
         ?>
+
+          
+
+        <main class="principal">
+
         <form method="POST" action="proc_cad_oficio.php">
-            <label>Nº do Ofício:</label>
-            <input type="number" name="numerooficio" placeholder="Nº do Ofício"><br><br>
+            <fieldset>
+            <div class="form-container">
+            <span class="label">Nº do Ofício:</span><input type="number" placeholder="Nº do Ofício" name="numerooficio" required> <br>
+            <span class="label">Pregão Eletrônico:</span><input type="number" placeholder="Nº do Pregão Eletrônico" name="pregaoeletronico" required> <br>
+            <span class="label">Setorial:</span><input type="text" placeholder="Informe o Setorial" name="setorial" required> <br>
+            <label>Descrição:</label>
+            <textarea name="descricao" rows="3" cols="50"></textarea><br><br>
+            <button type="submit" name="cadastrar" value="Salvar" class="css3button">Salvar</button>
             
-            <label>Pregão Eletrônico:</label>
-            <input type="number" name="pregaoeletronico" placeholder="Nº do Pregão Eletrônico"><br><br>
+            </div> 
+             </fieldset>
             
-            <label>Setorial:</label>
-            <input type="text" name="setorial" placeholder="Insira o Setorial"><br><br>
-            
-             <label>Descrição:</label>
-             <textarea name="descricao" rows="3" cols="50"></textarea><br><br>
-            
-             <input name="cadastrar" type="submit" value="Cadastrar">
         </form>
+ 
+        </main>
+        
+
+               
+        <footer class="rodape">
+            
+        NK Web Developer in PHP © <?= date("Y");  ?>
+        
+        </footer>
     </body>
 </html>
