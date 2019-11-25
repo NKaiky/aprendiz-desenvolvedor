@@ -18,17 +18,19 @@ session_start();
         
         <div class="info"> Preencha e salve as informações corretamente. </div>
 
-        <?php
+        
+        <main class="principal">
+            
+            <div class="mensagem">
+                
+             <?php
         if(isset($_SESSION['msg'])){
             echo $_SESSION['msg'];
             unset($_SESSION['msg']);
         }
-        ?>
-
-          
-
-        <main class="principal">
-
+             ?>
+            </div>
+            
         <form method="POST" action="proc_cad_oficio.php">
             <fieldset>
             <div class="form-container">
@@ -43,7 +45,7 @@ session_start();
              </fieldset>
             
         </form>
- 
+        
         </main>
         
 
