@@ -62,7 +62,8 @@ body    {
 fieldset{
         box-shadow: 10px 10px 12px -10px rgba(0,0,0,0.75);
         border: none;
-        margin: 0px;
+        border-radius: 13px; 
+       margin: 0px;
         padding: 30px;
         background-color: #D8D8D8;
         position: center;
@@ -75,10 +76,6 @@ fieldset{
   
   
 }
-
-
-
-
 
 input[type="text"] {
     border: 0px solid #456879;
@@ -141,6 +138,11 @@ button.css3button {
 		0px 1px 0px rgba(255,255,255,1);
         cursor: pointer;
 }
+
+.mensagem {
+   margin-bottom: 30px;
+}
+
 
 
 .rodape {
