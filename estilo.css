@@ -1,0 +1,155 @@
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body    {
+    height: 100vh;
+    margin: 0px;
+    display: grid;    
+    grid-template-rows: 120px 30px 1fr 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecalho"
+        "info"
+        "principal"
+        "rodape";    
+}
+
+.info {
+    grid-area:info;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 9px;
+}
+
+.cabecalho  {
+    grid-area: cabecalho;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 10px 10px 12px -10px rgba(0,0,0,0.75);
+
+}
+
+.cabecalho > h1 {
+    margin: 0px;
+    padding-top: 50px;
+    font-weight: 300;
+    font-size: 3.6rem;
+}
+
+
+.principal  {
+    grid-area: principal;
+    height: calc(100vh - 180px);
+    background-color: #f0f0f0;
+    margin: 0px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 12px -10px rgba(0,0,0,0.75);
+    font-size: 1.0rem;
+   
+}
+
+
+fieldset{
+        box-shadow: 10px 10px 12px -10px rgba(0,0,0,0.75);
+        border: none;
+        margin: 0px;
+        padding: 30px;
+        background-color: #D8D8D8;
+        position: center;
+}
+
+.form-container span.label{
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 35px;     
+  
+  
+}
+
+
+
+
+
+input[type="text"] {
+    border: 0px solid #456879;
+    border-radius: 5px;
+    height: 24px;
+    width: 180px;
+    margin-left: 15px;
+    float: right;
+    margin-top: -5px;
+    padding-left: 5px;
+}
+    
+input[type="number"] {
+    border: 0px solid #456879;
+    border-radius: 5px;
+    height: 24px;
+    width: 180px;
+    margin-left: 15px;
+    float: right;
+    margin-top: -5px;
+    padding-left: 5px;
+}
+
+
+textarea {
+    border: 0px solid #456879;
+    border-radius: 5px;
+    height: 74px;
+    width: 180px;
+    margin-left: 15px;
+    margin-top: -5px;
+    float: right;
+    padding-left: 5px;
+}
+
+button.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #050505;
+	padding: 10px 20px;
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#ffffff),
+		color-stop(0.50, #ebebeb),
+		color-stop(0.50, #dbdbdb),
+		to(#b5b5b5));
+	background: linear-gradient(
+		top,
+		#ffffff 0%,
+		#ebebeb 50%,
+		#dbdbdb 50%,
+		#b5b5b5);
+	border-radius: 10px;
+	border: 1px solid #949494;
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,1);
+        cursor: pointer;
+}
+
+
+.rodape {
+    grid-area: rodape;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+
+}
